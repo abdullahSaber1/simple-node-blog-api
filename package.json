@@ -2,10 +2,10 @@
   "name": "node_articals",
   "version": "1.0.0",
   "description": "",
-  "main": "grapql-server.js",
+  "main": "./Grapql/grapql-server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon Grapql/grapql-server.js"
+    "start": "nodemon Graphql/grapql-server.js"
   },
   "author": "abdallah saber",
   "license": "ISC",
