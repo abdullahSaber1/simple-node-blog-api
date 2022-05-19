@@ -25,9 +25,12 @@ const getAllComment = catchAsync(async (req, res, next) => {
 
 const createNewComment = catchAsync(async (req, res, next) => {
   const { username, content, article } = req.body;
+
   const articleRelated = await ARTICLE.findById(article);
   if (!articleRelated) next();
+
   const comment = await COMMENT.create({ username, content, article });
+
   articleRelated.comments.push(comment);
   await articleRelated.save();
   res
